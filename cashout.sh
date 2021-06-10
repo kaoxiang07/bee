@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-[ -z ${DEBUG_API+x} ] && DEBUG_API=http://localhost:1635
+[ -z ${DEBUG_API+x} ] && DEBUG_API=http://localhost:$((1635+$1*100))
 [ -z ${MIN_AMOUNT+x} ] && MIN_AMOUNT=10000
 
 function getPeers() {

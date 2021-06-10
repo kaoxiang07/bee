@@ -2,10 +2,10 @@
 
 start() {
 	if [ -z "${DATA_DIR}" ]; then
-		DATA_DIR=/var/lib/bee-clef
+		DATA_DIR=/mnt/.bee-clef$2
 	fi
 	if [ -z "${CONFIG_DIR}" ]; then
-		CONFIG_DIR=/etc/bee-clef
+		CONFIG_DIR=/mnt/.bee-clef$2/config
 	fi
 	if [ -z "${PASSWORD_FILE}" ]; then
 		PASSWORD_FILE=${DATA_DIR}/password
