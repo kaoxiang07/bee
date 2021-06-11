@@ -2,10 +2,10 @@
 
 start() {
 	if [ -z "${DATA_DIR}" ]; then
-		DATA_DIR=/mnt/.bee-clef$2
+		DATA_DIR=/mnt/.bee-clef$1
 	fi
 	if [ -z "${CONFIG_DIR}" ]; then
-		CONFIG_DIR=/mnt/.bee-clef$2/config
+		CONFIG_DIR=/mnt/.bee-clef$1/config
 	fi
 	if [ -z "${PASSWORD_FILE}" ]; then
 		PASSWORD_FILE=${DATA_DIR}/password
@@ -42,5 +42,5 @@ stop() {
 }
 
 case $1 in
-	start|stop) "$1"
+	start|stop) $($1 $2)
 esac
