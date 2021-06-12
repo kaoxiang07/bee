@@ -7,7 +7,7 @@
 
 #Start bee-clef
 apt install -y jq
-for ((i=2; i<11; i++)); do
+for ((i=3; i<90; i++)); do
 	sudo apt-get -y --purge remove bee
 	sudo apt-get -y --purge remove bee-clef
 	sudo dpkg -i bee-clef_0.4.12_amd64.deb
@@ -21,7 +21,7 @@ for ((i=2; i<11; i++)); do
 done
 
 #Start bee
-for ((i=2; i<11; i++)); do
+for ((i=3; i<90; i++)); do
 	sudo apt-get -y --purge remove bee
 	sudo apt-get -y --purge remove bee-clef
 	sudo dpkg -i bee-clef_0.4.12_amd64.deb
