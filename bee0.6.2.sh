@@ -13,7 +13,7 @@ for ((i=0; i<80; i++)); do
 	sudo dpkg -i bee-clef_0.4.12_amd64.deb
 	sudo dpkg -i bee_0.6.2_amd64.deb
 	mkdir -p /mnt/tmp/.bee-clef$i/config/
-	echo Now moving data files into /mnt/.bee-clef$i/...
+	echo Now moving data files into /mnt/tmp/.bee-clef$i/...
 	mv /etc/bee-clef/* /mnt/tmp/.bee-clef$i/config/
 	mv /var/lib/bee-clef/* /mnt/tmp/.bee-clef$i/
 	tmux new -s beeclef$i -d -n beeclef$i
