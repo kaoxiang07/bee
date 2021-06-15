@@ -1,6 +1,6 @@
 #!/bin/bash
 #Add peers for all node
-for ((i=0; i<90; i++)); do
+for ((i=0; i<80; i++)); do
 	curl -X POST localhost:$((1635+$i*10))/connect/ip4/172.96.203.143/tcp/1640/p2p/16Uiu2HAmQXEfeDoBm4eTFSYJcQ8BBCJzccxSvjAyY3XaiHtYrHEp
 	curl -X POST localhost:$((1635+$i*10))/connect/ip4/43.130.16.240/tcp/1634/p2p/16Uiu2HAmRMsU4FJPSBsyExukMJ5HrmyCbQRy9y4E6fmj8shfaujc
 	curl -X POST localhost:$((1635+$i*10))/connect/ip4/66.181.45.134/tcp/50254/p2p/16Uiu2HAkzyGEtXiqx77A4JJ1hA5ojsCfRD5XPM2jWNsTiiX6wvAi
