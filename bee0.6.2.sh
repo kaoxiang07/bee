@@ -10,8 +10,8 @@ apt install -y jq
 for ((i=0; i<80; i++)); do
 	sudo apt-get -y --purge remove bee
 	sudo apt-get -y --purge remove bee-clef
-	sudo dpkg -i bee-clef_0.4.12_amd64.deb
-	sudo dpkg -i bee_0.6.2_amd64.deb
+	sudo dpkg -i package/bee-clef_0.4.12_amd64.deb
+	sudo dpkg -i package/bee_0.6.2_amd64.deb
 	mkdir -p /mnt/tmp/.bee-clef$i/config/
 	echo Now moving data files into /mnt/tmp/.bee-clef$i/...
 	mv /etc/bee-clef/* /mnt/tmp/.bee-clef$i/config/
@@ -24,8 +24,8 @@ done
 for ((i=0; i<80; i++)); do
 	sudo apt-get -y --purge remove bee
 	sudo apt-get -y --purge remove bee-clef
-	sudo dpkg -i bee-clef_0.4.12_amd64.deb
-	sudo dpkg -i bee_0.6.2_amd64.deb
+	sudo dpkg -i package/bee-clef_0.4.12_amd64.deb
+	sudo dpkg -i package/bee_0.6.2_amd64.deb
 	echo Now starting bee node $i
 	mkdir /mnt/tmp/.bee$i/
 	cp /etc/bee/bee.yaml /mnt/tmp/.bee$i/ 
